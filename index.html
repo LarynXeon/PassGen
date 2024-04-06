@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            PassGenDevil
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+
+    <body>
+        <div class="inputBox">
+            <h2>
+                PassGenDevil
+            </h2>
+            <input type="text" name="" placeholder="Create Password" id="password"  readonly="">
+            <script type="text/javascript">
+                function getPassword(){
+                    var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()[]{}_+-=?<>:";
+                    var passwordlegnth = 16;
+                    var password = ""
+        
+                    for (var i=0; i<passwordlegnth; i++ ) {
+                        var RandomNumber = Math.floor(Math.random() * chars.length);
+                        password += chars.substring(RandomNumber,RandomNumber+1);
+                    }
+                    document.getElementById("password").value = password
+                }
+                </script>
+            <div id="btn" onclick="getPassword()";>
+            Generate Password
+            </div>
+        </div>
+
+
+    </body>
+
+
+</html>
